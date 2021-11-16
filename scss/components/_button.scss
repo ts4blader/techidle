@@ -1,0 +1,21 @@
+.button {
+    font-size: 2rem;
+    position: relative;
+    color: $main-color;
+    border: 3px solid $main-color;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: max-content;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    box-shadow: 0.4rem 0.3rem 0 0 $main-color;
+    &:active {
+        transform: translate(0.4rem, 0.3rem);
+        box-shadow: none;
+    }
+    &[data-type="secondary"] {
+        background: $main-color;
+        color: $white-color;
+        box-shadow: none;
+    }
+}

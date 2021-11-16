@@ -1,0 +1,40 @@
+.nav {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+    height: 10vh;
+    &__logo {
+        @include size(3em);
+        margin-right: 1em;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include size(150%);
+            opacity: 0;
+            border: 3px solid $main-color;
+            border-radius: 8px;
+            z-index: -1;
+            transition: 300ms ease;
+        }
+        &:hover::after {
+            opacity: 1;
+            @include size(120%);
+        }
+    }
+    &__categories {
+        display: flex;
+        li {
+            font-size: 1.1em;
+            text-transform: capitalize;
+            margin: 0 1rem;
+        }
+    }
+    .button {
+        margin-left: auto;
+    }
+}

@@ -5,4 +5,6 @@ const META = {
   url: "",
 };
 
-export { META };
+const CATEGORIES = ["smartphone", "tablet", "laptop", "watch"];
+
+export { META, CATEGORIES };
