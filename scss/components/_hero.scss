@@ -1,0 +1,30 @@
+.hero {
+    font-size: 2rem;
+    height: 90vh;
+    @include flex();
+    &__content {
+        flex: 1;
+        .title {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: $text-color;
+            margin-bottom: 0.5em;
+        }
+        .subtitle {
+            font-size: 1em;
+            max-width: 55rem;
+            margin-bottom: 1.5em;
+        }
+        .cta {
+            .button {
+                font-size: 1.2em;
+                padding: 0.5em 1em;
+                text-align: center;
+                width: 25rem;
+            }
+        }
+    }
+    &__preview {
+        flex: 1;
+    }
+}

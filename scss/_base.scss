@@ -14,7 +14,7 @@ html {
 
 body {
     font-size: 2rem;
-    color: $text-color;
+    color: $black-color;
     background: $bg-color;
     line-height: 1.5;
 }
@@ -27,7 +27,7 @@ img {
 a {
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: $black-color;
 }
 
 .wrapper {
