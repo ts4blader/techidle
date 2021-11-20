@@ -1,4 +1,4 @@
-const HOME_HERO = {
+const HERO = {
   title: "This is for you",
   subtitle:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
@@ -6,4 +6,4 @@ const HOME_HERO = {
   preview: "",
 };
 
-export { HOME_HERO };
+export { HERO };
