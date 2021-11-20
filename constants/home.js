@@ -6,4 +6,6 @@ const HERO = {
   preview: "",
 };
 
-export { HERO };
+const TRENDING = [{}];
+
+export { HERO, TRENDING };
