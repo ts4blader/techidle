@@ -5,6 +5,6 @@ const META = {
   url: "",
 };
 
-const CATEGORIES = ["mi", "redmi", "POCOPHONE", "others"];
+const CATEGORIES = ["mi", "redmi", "poco", "others"];
 
 export { META, CATEGORIES };
