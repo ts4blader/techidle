@@ -34,7 +34,11 @@ const others = [
 ];
 
 const OTHER = others.map((item) => {
-  return { name: item.split("-").join(" "), img: item + ".png", content: [] };
+  return {
+    name: item.split("-").join(" "),
+    img: `/images/others/${item}.png`,
+    content: [],
+  };
 });
 
 export { OTHER };

@@ -1,7 +1,6 @@
 const phone = [
   "5K3",
   "7A",
-  "8CP",
   "9T",
   "11-5G",
   "11-lite-5G",
@@ -23,7 +22,11 @@ const phone = [
 ];
 
 const REDMI = phone.map((item) => {
-  return { name: item.split("-").join(" "), img: item + ".png", content: [] };
+  return {
+    name: "REDMI " + item.split("-").join(" "),
+    img: `/images/redmi/${item}.png`,
+    content: [],
+  };
 });
 
 export { REDMI };

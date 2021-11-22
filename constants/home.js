@@ -1,3 +1,6 @@
+import { ALL } from "./all";
+import { shuffleArray } from "../libs/mixin";
+
 const HERO = {
   title: "This is for you",
   subtitle:
@@ -6,6 +9,6 @@ const HERO = {
   preview: "",
 };
 
-const TRENDING = [{}];
+const TRENDING = shuffleArray(ALL).slice(0, 6);
 
 export { HERO, TRENDING };

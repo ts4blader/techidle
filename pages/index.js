@@ -1,7 +1,8 @@
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
-import { HERO } from "../constants/home";
+import Carousel from "../components/Carousel";
+import { HERO, TRENDING } from "../constants/home";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero content={HERO} />
       {/* Trending section */}
       <SectionTitle text="trending" />
+      <Carousel data={TRENDING} />
     </div>
   );
 }

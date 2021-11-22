@@ -1,0 +1,64 @@
+.carousel {
+    position: relative;
+    font-size: 2rem;
+    margin-top: 5vh;
+    .control {
+        position: absolute;
+        cursor: pointer;
+        z-index: $middle-layer;
+        top: 50%;
+        background: $text-color;
+        @include flex();
+        @include size(3em);
+        border-radius: 0.5em;
+        .icon {
+            width: 50%;
+        }
+        &.prev {
+            left: 0;
+            transform: translate(-150%, -50%);
+        }
+        &.next {
+            right: 0;
+            transform: translate(150%, -50%) rotate(180deg);
+        }
+    }
+    .glide__slide {
+        height: 20rem;
+        position: relative;
+        @include flex();
+        perspective: 1000px;
+        &:hover {
+            .content {
+                box-shadow: 0 1rem 2rem 0 rgba($color: $black-color, $alpha: 0.5);
+                transform: translateY(-1rem);
+            }
+            .backdrop {
+                transform: rotateX(50deg) translateY(50%);
+            }
+        }
+        .content {
+            @include size(70%);
+            @include flex(center, column);
+            padding: 0 1rem;
+            background: $white-color;
+            border-radius: 1rem;
+            text-align: center;
+            z-index: $middle-layer;
+            transition: 0.3s ease;
+            .name {
+                text-transform: capitalize;
+                color: $text-color;
+                font-weight: 500;
+                margin-top: 0.5em;
+            }
+        }
+        .backdrop {
+            position: absolute;
+            @include size(100%);
+            background: $main-color;
+            border-radius: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+    }
+}

@@ -6,7 +6,6 @@ const phone = [
   "C3K",
   "C3M",
   "F1",
-  "F2",
   "F4",
   "F4L",
   "F6-lite",
@@ -23,7 +22,11 @@ const phone = [
 ];
 
 const MI = phone.map((item) => {
-  return { name: item.split("-").join(" "), img: item + ".png", content: [] };
+  return {
+    name: "MI " + item.split("-").join(" "),
+    img: `/images/mi/${item}.png`,
+    content: [],
+  };
 });
 
 export { MI };
