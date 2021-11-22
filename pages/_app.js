@@ -1,10 +1,13 @@
 import "../scss/main.scss";
 import { Store } from "../store/Store";
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
   return (
     <Store>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Store>
   );
 }

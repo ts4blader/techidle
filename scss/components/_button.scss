@@ -2,6 +2,7 @@
     font-size: 2rem;
     position: relative;
     color: $main-color;
+    background: $white-color;
     border: 3px solid $main-color;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -17,5 +18,21 @@
         background: $main-color;
         color: $white-color;
         box-shadow: none;
+    }
+}
+
+.ontop-button {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: $middle-layer + 1;
+    .button {
+        @include size(6rem);
+        @include flex();
+        padding: 0;
+        .icon {
+            transform: rotate(-90deg);
+            width: 70%;
+        }
     }
 }
