@@ -1,0 +1,50 @@
+.product-show {
+    margin: 5vmin auto;
+    .product-list {
+        display: grid;
+        grid-template-areas:
+            "item-0 item-0 item-1 item-1"
+            "item-0 item-0 item-2 item-2"
+            "item-3 item-4 item-2 item-2";
+        grid-gap: 3rem;
+        .item {
+            position: relative;
+            transition: transform 0.2s ease;
+            span {
+                height: 100% !important;
+            }
+            .name {
+                position: absolute;
+                font-weight: bold;
+                top: 10%;
+                left: 5%;
+                background: $white-color;
+                color: $text-color;
+                padding: 0.5em 1em;
+                border-radius: 0.5rem;
+            }
+            img {
+                border-radius: 1rem;
+                object-fit: cover;
+            }
+            &.item-0 {
+                grid-area: item-0;
+            }
+            &.item-1 {
+                grid-area: item-1;
+            }
+            &.item-2 {
+                grid-area: item-2;
+            }
+            &.item-3 {
+                grid-area: item-3;
+            }
+            &.item-4 {
+                grid-area: item-4;
+            }
+            &:hover {
+                transform: translateY(-1rem);
+            }
+        }
+    }
+}

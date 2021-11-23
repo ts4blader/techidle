@@ -11,4 +11,13 @@ const HERO = {
 
 const TRENDING = shuffleArray(ALL).slice(0, 6);
 
-export { HERO, TRENDING };
+const thumbnail = ["K3S", "K9D", "K11R", "K19", "R10"];
+
+const NEW = thumbnail.map((item) => {
+  return {
+    name: item,
+    img: `/images/banner/${item}.jpg`,
+  };
+});
+
+export { HERO, TRENDING, NEW };
