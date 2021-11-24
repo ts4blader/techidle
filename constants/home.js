@@ -20,4 +20,28 @@ const NEW = thumbnail.map((item) => {
   };
 });
 
-export { HERO, TRENDING, NEW };
+const CARDS = [
+  {
+    title: "ALFRED ADLER",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor",
+    date: "aug 17, 2021",
+    bg: "olena.jpg",
+  },
+  {
+    title: "CARL JUNG",
+    description:
+      "My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it",
+    date: "november 5, 2021",
+    bg: "grace.jpg",
+  },
+  {
+    title: "SIGMUND FREUD",
+    description:
+      "Kangaskhan protects its child by keeping it in its pouch. It has zero forgiveness for those who harm its child and will beat them down",
+    date: "april 14, 2021",
+    bg: "jonas.jpg",
+  },
+];
+
+export { HERO, TRENDING, NEW, CARDS };

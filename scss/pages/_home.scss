@@ -1,5 +1,15 @@
 .home-page {
     section {
         margin-bottom: 10vh;
+        .cards {
+            margin-top: 5vmin;
+            display: flex;
+            .card {
+                margin-right: 5rem;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }

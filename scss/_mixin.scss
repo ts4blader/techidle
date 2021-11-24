@@ -57,3 +57,10 @@
         display: none;
     }
 }
+
+/// animation class
+@for $i from 1 through 10 {
+    .delay-#{$i} {
+        animation-delay: "#{$i}00ms";
+    }
+}
