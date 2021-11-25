@@ -3,36 +3,37 @@ import SectionTitle from "../components/SectionTitle";
 import Carousel from "../components/Carousel";
 import ProductShow from "../components/ProductShow";
 import Card from "../components/Card";
+import Image from "../components/Image";
 import According from "../components/According";
-import { HERO, TRENDING, NEW, CARDS, FAQ } from "../constants/home";
+import { HERO, TRENDING, NEW, CARDS, FAQ, PARTNERS } from "../constants/home";
 
 export default function Home() {
   return (
     <div className="home-page">
       <Hero content={HERO} />
       {/* Trending section */}
-      <section className="trending">
+      <section className="trending container">
         <SectionTitle text="trending" />
         <Carousel data={TRENDING} />
       </section>
       {/* New Product section */}
-      <section className="new">
+      <section className="new container">
         <SectionTitle text="new products" />
         <ProductShow data={NEW} />
       </section>
       {/* Customer feedback section */}
-      <section className="customer-feedback">
+      <section className="customer-feedback container">
         <SectionTitle text="our customers feedback" />
-        <div className="cards container">
+        <div className="cards">
           {CARDS.map((item, index) => {
             return <Card data={item} number={index + 1} key={item.title} />;
           })}
         </div>
       </section>
       {/* FAQ section */}
-      <section className="faq">
+      <section className="faq container">
         <SectionTitle text="frequently ask questions" />
-        <div className="faqs container">
+        <div className="faqs">
           <div className="col">
             {FAQ.slice(0, 5).map((item) => {
               return <According data={item} key={item.question} />;
@@ -43,6 +44,19 @@ export default function Home() {
               return <According data={item} key={item.question} />;
             })}
           </div>
+        </div>
+      </section>
+      {/* Our partners section */}
+      <section className="partners container">
+        <SectionTitle text="our partners" />
+        <div className="partners-wrapper">
+          {PARTNERS.map((item) => {
+            return (
+              <a className="partner" key={item.name} href={item.url}>
+                <Image src={`partners/${item.img}`} alt={item.name} />
+              </a>
+            );
+          })}
         </div>
       </section>
     </div>

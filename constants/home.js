@@ -45,4 +45,22 @@ const CARDS = [
   },
 ];
 
-export { HERO, TRENDING, NEW, CARDS, FAQ };
+const PARTNERS = [
+  {
+    name: "tiki",
+    img: "tiki.png",
+    url: "https://tiki.vn/",
+  },
+  {
+    name: "lazada",
+    img: "lazada.jpg",
+    url: "https://www.lazada.vn/",
+  },
+  {
+    name: "shopee",
+    img: "shopee.jpg",
+    url: "https://shopee.vn/",
+  },
+];
+
+export { HERO, TRENDING, NEW, CARDS, FAQ, PARTNERS };

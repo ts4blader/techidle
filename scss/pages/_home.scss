@@ -19,5 +19,14 @@
                 width: 45%;
             }
         }
+        &.partners {
+            .partners-wrapper {
+                @include flex(space-around, center);
+                margin-top: 5vmin;
+                .partner {
+                    width: 20%;
+                }
+            }
+        }
     }
 }

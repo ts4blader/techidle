@@ -32,27 +32,25 @@ export default function Carousel({ data = [] }) {
   }, []);
 
   return (
-    <div className="container">
-      <div className="glide carousel">
-        {/* Control */}
-        <div data-glide-el="controls">
-          <div className="control prev" data-glide-dir="<">
-            <Icon src="arrow.png" alt="prev" />
-          </div>
-          <div className="control next" data-glide-dir=">">
-            <Icon src="arrow.png" alt="next" />
-          </div>
+    <div className="glide carousel">
+      {/* Control */}
+      <div data-glide-el="controls">
+        <div className="control prev" data-glide-dir="<">
+          <Icon src="arrow.png" alt="prev" />
         </div>
-        {/* End Control */}
-        <div className="glide__track" data-glide-el="track">
-          {/* Slides */}
-          <ul className="glide__slides">
-            {data.map((item) => {
-              return <Item data={item} key={item.name} />;
-            })}
-          </ul>
-          {/* End Slides */}
+        <div className="control next" data-glide-dir=">">
+          <Icon src="arrow.png" alt="next" />
         </div>
+      </div>
+      {/* End Control */}
+      <div className="glide__track" data-glide-el="track">
+        {/* Slides */}
+        <ul className="glide__slides">
+          {data.map((item) => {
+            return <Item data={item} key={item.name} />;
+          })}
+        </ul>
+        {/* End Slides */}
       </div>
     </div>
   );

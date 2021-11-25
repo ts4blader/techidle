@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ProductShow({ data = [] }) {
   return (
-    <div className="product-show container">
+    <div className="product-show">
       <ul className="product-list">
         {data.map((item, index) => {
           return (
