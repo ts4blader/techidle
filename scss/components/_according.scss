@@ -24,6 +24,7 @@
         border-radius: 1rem;
         padding: 0.8em 1.2em;
         cursor: pointer;
+        box-shadow: 0 0 2rem 0 rgba($color: $light-color, $alpha: 0.5);
         .question {
             font-size: 1.1em;
             font-weight: 500;
