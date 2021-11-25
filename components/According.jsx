@@ -3,7 +3,7 @@ import Icon from "./Icon";
 
 export default function According({ data }) {
   const { question, answer } = data;
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   return (
     <div className="according" data-show={show}>
