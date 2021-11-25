@@ -17,8 +17,8 @@ export default function Nav() {
       <ul className="nav__categories">
         {CATEGORIES.map((item) => {
           return (
-            <li key={item}>
-              <Link href={`/${item}`}>{item}</Link>
+            <li key={item + "-nav"}>
+              <Link href={`/products#${item}`}>{item}</Link>
             </li>
           );
         })}
