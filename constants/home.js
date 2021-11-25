@@ -1,5 +1,6 @@
 import { ALL } from "./all";
 import { shuffleArray } from "../libs/mixin";
+import FAQ from "./faq.json";
 
 const HERO = {
   title: "This is for you",
@@ -44,4 +45,4 @@ const CARDS = [
   },
 ];
 
-export { HERO, TRENDING, NEW, CARDS };
+export { HERO, TRENDING, NEW, CARDS, FAQ };

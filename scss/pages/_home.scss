@@ -11,5 +11,13 @@
                 }
             }
         }
+        .faqs {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5vmin;
+            .col {
+                width: 45%;
+            }
+        }
     }
 }

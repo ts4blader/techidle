@@ -1,0 +1,76 @@
+.according {
+    font-size: 2rem;
+    transform: rotate(1deg);
+    transition: transform 0.2s ease;
+    &[data-show="false"] {
+        transform: rotate(0);
+        .according__body {
+            padding: 0;
+            opacity: 0;
+            height: 0;
+        }
+        .according__head {
+            .caret {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $light-color;
+        color: $text-color;
+        border-radius: 1rem;
+        padding: 0.8em 1.2em;
+        cursor: pointer;
+        .question {
+            font-size: 1.1em;
+            &::after {
+                content: "?";
+            }
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+        .caret {
+            transition: transform 0.3s ease;
+            margin-left: 1rem;
+            transform: rotate(-90deg);
+            .icon {
+                width: 1em;
+            }
+        }
+    }
+    &__body {
+        height: 15rem;
+        overflow: auto;
+        font-size: 0.8em;
+        background: $dark-color;
+        color: $white-color;
+        border-radius: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em 1.5em;
+        transition: 0.3s ease;
+        @include flex();
+        .answer {
+            position: relative;
+            padding-left: 2rem;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                background: $white-color;
+                left: 0;
+            }
+        }
+    }
+}
