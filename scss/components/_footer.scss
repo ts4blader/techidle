@@ -1,0 +1,39 @@
+.footer {
+    padding: 5vmin 0;
+    background: $main-color;
+    color: $white-color;
+    font-size: 2rem;
+    a {
+        color: $white-color;
+        transition: transform 0.1s ease;
+        &:hover {
+            transform: translateX(0.5rem);
+            text-decoration: underline;
+        }
+    }
+    &__body {
+        text-transform: capitalize;
+        margin-bottom: 5vmin;
+        .pillars {
+            display: flex;
+            ul.pillar {
+                margin-right: 10rem;
+                .title {
+                    font-weight: bold;
+                    font-size: 1.1em;
+                    margin-bottom: 0.5em;
+                }
+                li {
+                }
+            }
+        }
+        .rive-animation {
+        }
+    }
+    &__foot {
+        color: $light-color;
+        @include flex(space-between, center);
+        font-size: 0.8em;
+        font-style: italic;
+    }
+}
