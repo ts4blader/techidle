@@ -26,6 +26,7 @@
         cursor: pointer;
         .question {
             font-size: 1.1em;
+            font-weight: 500;
             &::after {
                 content: "?";
             }
