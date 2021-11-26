@@ -14,6 +14,7 @@
     &__body {
         text-transform: capitalize;
         margin-bottom: 5vmin;
+        @include flex(space-between, center);
         .pillars {
             display: flex;
             ul.pillar {
@@ -27,7 +28,7 @@
                 }
             }
         }
-        .rive-animation {
+        .footer-image {
         }
     }
     &__foot {

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { CATEGORIES, SOCIAL, PARTNERS } from "../constants/footer";
+import Image from "./Image";
 
 export default function Footer() {
   return (
@@ -34,8 +35,10 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          {/* Rive animation  */}
-          <div className="rive-animation"></div>
+          {/* Footer image  */}
+          <div className="footer-image hide-on-sm">
+            <Image src="svg/footer_image.svg" alt="footer image" />
+          </div>
         </div>
         <div className="footer__foot">
           <p className="copyright">@TechIdle Vietnam 2021</p>
