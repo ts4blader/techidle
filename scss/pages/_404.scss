@@ -1,0 +1,25 @@
+.notfound-page {
+    font-size: 2rem;
+    text-align: center;
+    margin: 5vmin 0;
+    .img {
+        max-width: 100rem;
+        margin: 0 auto 2em auto;
+    }
+    p.description {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+    .cta {
+        .button {
+            font-size: 1.2em;
+            margin-left: auto;
+            margin-right: auto;
+            .icon {
+                transform: rotate(180deg);
+                margin-right: 1rem;
+            }
+        }
+    }
+}
