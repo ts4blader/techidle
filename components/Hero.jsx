@@ -10,7 +10,7 @@ export default function Hero({ content, align }) {
         <h2 className="title">{title}</h2>
         <p className="subtitle">{subtitle}</p>
         <div className="cta">
-          <Button text={cta} type="secondary" />
+          <Button text={cta.text} type="secondary" link={cta.url} />
         </div>
       </div>
       <div className="hero__preview">{preview}</div>
