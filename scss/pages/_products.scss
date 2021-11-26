@@ -1,0 +1,35 @@
+.products-page {
+    .stand-out {
+        font-size: 2rem;
+        background: $main-color;
+        padding-left: 10%;
+        padding-top: 5vmin;
+        padding-bottom: 5vmin;
+        .title {
+            font-size: 2em;
+            color: $white-color;
+            font-weight: bold;
+        }
+        .carousel {
+            margin-top: 3rem;
+            .control {
+                display: none;
+            }
+            .glide__slide {
+                .backdrop {
+                    display: none;
+                }
+                .content {
+                    @include size(100%);
+                    padding: 2rem;
+                }
+                &:hover {
+                    .content {
+                        box-shadow: 0 1rem 2rem 0 rgba($color: $black-color, $alpha: 0.5);
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}

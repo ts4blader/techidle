@@ -15,19 +15,9 @@ const Item = ({ data }) => {
   );
 };
 
-export default function Carousel({ data = [] }) {
+export default function Carousel({ data = [], options = {} }) {
   useEffect(() => {
-    const glide = new Glide(".glide", {
-      type: "carousel",
-      perView: 4,
-      gap: 50,
-      autoplay: 10000,
-      hoverpause: true,
-      peek: {
-        before: 100,
-        after: 100,
-      },
-    });
+    const glide = new Glide(".glide", options);
     glide.mount();
   }, []);
 
@@ -35,10 +25,10 @@ export default function Carousel({ data = [] }) {
     <div className="glide carousel">
       {/* Control */}
       <div data-glide-el="controls">
-        <div className="control prev" data-glide-dir="<">
+        <div className="control hide-on-sm prev" data-glide-dir="<">
           <Icon src="arrow.png" alt="prev" />
         </div>
-        <div className="control next" data-glide-dir=">">
+        <div className="control hide-on-sm next" data-glide-dir=">">
           <Icon src="arrow.png" alt="next" />
         </div>
       </div>

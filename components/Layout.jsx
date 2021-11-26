@@ -13,7 +13,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <div className="layout">
+    <div className="layout wrapper">
       {/* Navigation */}
       <Nav />
       {/* On top button */}

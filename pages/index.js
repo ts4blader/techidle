@@ -6,6 +6,7 @@ import Card from "../components/Card";
 import Image from "../components/Image";
 import According from "../components/According";
 import { HERO, TRENDING, NEW, CARDS, FAQ, PARTNERS } from "../constants/home";
+import { HOME_CAROUSEL } from "../constants/carousel-options";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       {/* Trending section */}
       <section className="trending container">
         <SectionTitle text="trending" />
-        <Carousel data={TRENDING} />
+        <Carousel data={TRENDING} options={HOME_CAROUSEL} />
       </section>
       {/* New Product section */}
       <section className="new container">
