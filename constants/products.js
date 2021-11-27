@@ -1,6 +1,6 @@
-import { ALL } from "./all";
+import * as PRODUCT from "./all";
 import { shuffleArray } from "../libs/mixin";
 
-const STANDOUT = shuffleArray(ALL).slice(0, 10);
+const STANDOUT = shuffleArray(PRODUCT.ALL).slice(0, 10);
 
-export { STANDOUT };
+export { STANDOUT, PRODUCT };

@@ -1,10 +1,16 @@
 .products-page {
+    section {
+        margin-bottom: 5vmin;
+        .section-title {
+            .title {
+                text-transform: uppercase;
+            }
+        }
+    }
     .stand-out {
         font-size: 2rem;
         background: $main-color;
-        padding-left: 10%;
-        padding-top: 5vmin;
-        padding-bottom: 5vmin;
+        padding: 5vmin 0 10vmin 10%;
         .title {
             font-size: 2em;
             color: $white-color;

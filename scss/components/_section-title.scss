@@ -1,5 +1,27 @@
 .section-title {
     font-size: 2rem;
+    cursor: pointer;
+    &__head {
+        @include flex(space-between, center);
+        .title-dropdown {
+            background: $main-color;
+            border-radius: 0.5rem;
+            @include flex();
+            @include size(2em);
+        }
+        .icon {
+            width: 50%;
+            transition: transform 0.3s ease;
+            transform: rotate(180deg);
+        }
+    }
+    &[data-fold="true"] {
+        .section-title__head {
+            .icon {
+                transform: rotate(45deg);
+            }
+        }
+    }
     .title {
         font-size: 2.5em;
         color: $text-color;
