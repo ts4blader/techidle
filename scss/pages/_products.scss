@@ -22,6 +22,9 @@
                 .content {
                     @include size(100%);
                     padding: 2rem;
+                    .name {
+                        margin-top: 1em;
+                    }
                 }
                 &:hover {
                     .content {
