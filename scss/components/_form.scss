@@ -1,8 +1,10 @@
-.signin-form {
+.signin-form,
+.signup-form {
     font-size: 2rem;
     background: $white-color;
-    padding: 5vmin 5%;
+    padding: 5vmin 8vmin;
     border-radius: 1rem;
+    // overflow: hidden;
     .title {
         font-size: 2em;
         font-weight: bold;
