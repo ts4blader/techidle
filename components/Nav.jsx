@@ -23,7 +23,7 @@ export default function Nav() {
           );
         })}
       </ul>
-      <Button text="Login" type="" />
+      <Button text="Login" link="/login" />
       <div className="nav__user-pane"></div>
     </nav>
   );

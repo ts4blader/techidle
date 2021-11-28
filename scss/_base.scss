@@ -19,6 +19,16 @@ body {
     background: $bg-color;
     line-height: 1.5;
 }
+input {
+    font-family: $main-font;
+}
+
+button {
+    font-family: $main-font;
+    border: none;
+    padding: none;
+    background: none;
+}
 
 img {
     display: block;
@@ -38,4 +48,11 @@ a {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.divider {
+    height: 3px;
+    width: 100%;
+    background: $light-color;
+    border-radius: 1rem;
 }
