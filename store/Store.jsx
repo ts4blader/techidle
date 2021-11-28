@@ -7,11 +7,14 @@ const StoreContext = createContext(null);
 const INITIAL = {
   showOverlay: false,
   overlayAction: () => {},
+  showSignIn: true,
 };
 //* ACTION
 const ACTION = {
   HIDE_OVERLAY: "HIDE_OVERLAY",
   SHOW_OVERLAY: "SHOW_OVERLAY",
+  HIDE_SIGNIN: "HIDE_SIGNIN",
+  SHOW_SIGNIN: "SHOW_SIGNIN",
 };
 
 const Store = ({ children }) => {

@@ -27,36 +27,36 @@ export default function SigninForm() {
   };
 
   return (
-    <div className="signin-form">
-      <div className="title">Login</div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <TextInput
-          register={register}
-          name="email"
-          placeholder="Email"
-          type="text"
-          error={errors.email}
-        />
-        <TextInput
-          register={register}
-          name="password"
-          type="password"
-          placeholder="Password"
-          error={errors.password}
-        />
-
-        <button type="submit">
-          <Button text="Sign in" type="secondary" />
-        </button>
-      </form>
-
-      <div className="divider"></div>
-      <div className="signup-pane">
-        <p>
-          New to TechIdle, <span className="signup-cta">Sign up now!</span>
-        </p>
-        <p>Or sign in with</p>
-        <AuthSection />
+    <div className="form-wrapper signin">
+      <div className="signin-form">
+        <div className="title">Login</div>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <TextInput
+            register={register}
+            name="email"
+            placeholder="Email"
+            type="text"
+            error={errors.email}
+          />
+          <TextInput
+            register={register}
+            name="password"
+            type="password"
+            placeholder="Password"
+            error={errors.password}
+          />
+          <button type="submit">
+            <Button text="Sign in" type="secondary" />
+          </button>
+        </form>
+        <div className="divider"></div>
+        <div className="signup-pane">
+          <p>
+            New to TechIdle, <span className="cta">Sign up now!</span>
+          </p>
+          <p>Or sign in with</p>
+          <AuthSection />
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,10 @@ const reducer = (state, action) => {
       return { ...state, showOverlay: false, overlayAction: () => {} };
     case ACTION.SHOW_OVERLAY:
       return { ...state, showOverlay: true, overlayAction: action.payload };
+    case ACTION.HIDE_SIGNIN:
+      return { ...state, showSignIn: false };
+    case ACTION.SHOW_SIGNIN:
+      return { ...state, showSignIn: true };
   }
 };
 

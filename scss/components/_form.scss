@@ -1,10 +1,20 @@
+.form-wrapper {
+    transition: width 0.5s ease;
+    border-radius: 1rem;
+    overflow: hidden;
+    &.signup[data-signin="true"] {
+        width: 0.5rem;
+    }
+    &.signin[data-signin="false"] {
+        width: 0.5rem;
+    }
+}
+
 .signin-form,
 .signup-form {
     font-size: 2rem;
     background: $white-color;
     padding: 5vmin 8vmin;
-    border-radius: 1rem;
-    // overflow: hidden;
     .title {
         font-size: 2em;
         font-weight: bold;
@@ -22,17 +32,17 @@
             }
         }
     }
+    p {
+        margin: 0.2rem 0;
+    }
+    .cta {
+        color: $link-color;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     .signup-pane {
-        p {
-            margin: 0.2rem 0;
-        }
-        .signup-cta {
-            color: $link-color;
-            cursor: pointer;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
         .auth-section {
             display: flex;
             font-size: 2rem;
