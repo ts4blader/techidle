@@ -6,6 +6,7 @@ import Image from "../components/Image";
 export default function LoginPage() {
   return (
     <div className="login-page">
+      <SigninForm />
       <SignupForm />
       <Image src="svg/login.svg" alt="login" />
     </div>

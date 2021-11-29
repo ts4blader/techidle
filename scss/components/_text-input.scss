@@ -10,11 +10,13 @@ form {
         input {
             width: 100%;
             font-size: 1em;
+            font-weight: 500;
             border-radius: 1rem;
             border: 3px solid $light-color;
             padding: 0.6em 1.2em;
         }
         .error {
+            pointer-events: none;
             font-size: 0.8em;
             position: absolute;
             font-weight: bold;

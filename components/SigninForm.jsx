@@ -5,6 +5,7 @@ import * as yup from "yup";
 import Button from "./Button";
 import TextInput from "./TextInput";
 import AuthSection from "./AuthSection";
+import { useStore, ACTION } from "../store/Store";
 
 const schema = yup
   .object({
@@ -14,6 +15,8 @@ const schema = yup
   .required();
 
 export default function SigninForm() {
+  const [state, dispatch] = useStore();
+
   const {
     register,
     handleSubmit,
@@ -27,8 +30,8 @@ export default function SigninForm() {
   };
 
   return (
-    <div className="form-wrapper signin">
-      <div className="signin-form">
+    <div className="form-wrapper signin" data-signin={state.showSignIn}>
+      <div className="signin-form container">
         <div className="title">Login</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <TextInput
@@ -52,7 +55,13 @@ export default function SigninForm() {
         <div className="divider"></div>
         <div className="signup-pane">
           <p>
-            New to TechIdle, <span className="cta">Sign up now!</span>
+            New to TechIdle,{" "}
+            <span
+              className="cta"
+              onClick={() => dispatch({ type: ACTION.HIDE_SIGNIN })}
+            >
+              Sign up now!
+            </span>
           </p>
           <p>Or sign in with</p>
           <AuthSection />

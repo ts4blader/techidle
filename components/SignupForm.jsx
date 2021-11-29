@@ -34,7 +34,7 @@ export default function SignupForm() {
 
   return (
     <div className="form-wrapper signup" data-signin={state.showSignIn}>
-      <div className="signup-form">
+      <div className="signup-form container">
         <div className="title">Sign up</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <TextInput
