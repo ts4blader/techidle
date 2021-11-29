@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import Button from "./Button";
 import Footer from "./Footer";
+import Loader from "./Loader";
 
 export default function Layout({ children }) {
   const onTop = () => {
@@ -14,6 +15,8 @@ export default function Layout({ children }) {
 
   return (
     <div className="layout wrapper">
+      {/* Loader */}
+      <Loader />
       {/* Navigation */}
       <Nav />
       {/* On top button */}

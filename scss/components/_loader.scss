@@ -1,0 +1,9 @@
+.loader {
+    position: fixed;
+    @include size(100%);
+    @include flex();
+    top: 0;
+    left: 0;
+    background: $main-color;
+    z-index: $modal-layer + 1;
+}
