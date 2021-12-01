@@ -11,6 +11,7 @@
         }
     }
     &__content {
+        height: 100%;
         transform: translateY(100%);
         transition: transform 0.3s $expoOut;
         background: $main-color;
