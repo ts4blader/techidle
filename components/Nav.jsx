@@ -29,7 +29,7 @@ export default function Nav() {
         <ul className="nav__categories">
           {CATEGORIES.map((item) => {
             return (
-              <li key={item + "-nav"}>
+              <li key={item + "-nav"} onClick={() => setShow(false)}>
                 <Link href={`/products#${item}`}>{item}</Link>
               </li>
             );
