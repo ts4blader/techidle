@@ -7,7 +7,7 @@
     z-index: $modal-layer + 1;
     font-size: 2rem;
     &[data-complete="true"] {
-        animation: slideDown 1s $expoIn 3.5s forwards;
+        animation: slideDown 1s $expoIn 3s forwards;
         p {
             display: none;
         }
@@ -45,7 +45,7 @@
         }
         @for $i from 0 through 10 {
             .char-#{$i} {
-                animation-delay: #{$i * 100 + 500}ms, #{$i * 100 + 3000}ms;
+                animation-delay: #{$i * 100 + 500}ms, #{$i * 100 + 2500}ms;
             }
         }
     }
