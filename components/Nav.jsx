@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Icon from "./Icon";
 import { CATEGORIES } from "../constants/base";
 import Button from "./Button";
 import Link from "next/link";
 
 export default function Nav() {
+  const [show, setShow] = useState(false);
+
   return (
-    <nav className="nav container">
+    <nav className="nav container" data-show={show}>
       <div className="nav__logo">
         <Link href="/">
           <a>
@@ -14,17 +16,27 @@ export default function Nav() {
           </a>
         </Link>
       </div>
-      <ul className="nav__categories">
-        {CATEGORIES.map((item) => {
-          return (
-            <li key={item + "-nav"}>
-              <Link href={`/products#${item}`}>{item}</Link>
-            </li>
-          );
-        })}
-      </ul>
-      <Button text="Login" link="/login" />
-      <div className="nav__user-pane"></div>
+      <div className="nav__hamburger hide" onClick={() => setShow(true)}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <div className="nav__right">
+        <div className="nav__close hide" onClick={() => setShow(false)}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        <ul className="nav__categories">
+          {CATEGORIES.map((item) => {
+            return (
+              <li key={item + "-nav"}>
+                <Link href={`/products#${item}`}>{item}</Link>
+              </li>
+            );
+          })}
+        </ul>
+        <Button text="Login" link="/login" />
+      </div>
     </nav>
   );
 }

@@ -34,9 +34,113 @@
             margin: 0 1rem;
         }
     }
+    &__right {
+        @include flex();
+        flex-grow: 1;
+    }
     .button {
         width: 10rem;
         text-align: center;
         margin-left: auto;
+    }
+}
+@include responsive($break-point-sm) {
+    .nav {
+        &[data-show="true"] {
+            .nav__right {
+                transform: translateY(0%);
+            }
+            .nav__categories {
+                li {
+                    animation: navItem 1s 1 $expoOut forwards;
+                }
+            }
+        }
+        .bar {
+            width: 100%;
+            height: 0.8rem;
+            background: $main-color;
+            border-radius: 0.5rem;
+        }
+        &__right {
+            transition: transform 0.5s $expoOut;
+            transform: translateY(100%);
+            position: fixed;
+            @include size(100%);
+            background: $main-color;
+            top: 0;
+            left: 0;
+            z-index: $middle-layer + 1;
+            flex-direction: column;
+            .nav__categories {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                li {
+                    font-size: 2.5em;
+                    padding: 0.5em 0;
+                    transform: translateY(200%);
+                    opacity: 0;
+                    & > * {
+                        color: $white-color;
+                    }
+                    @for $i from 1 through 4 {
+                        &:nth-child(#{$i}) {
+                            animation-delay: #{$i * 100}ms;
+                        }
+                    }
+                }
+            }
+            .button {
+                position: absolute;
+                width: 50%;
+                font-size: 2em;
+                padding: 0.2em 0.5em;
+                bottom: 5vh;
+                border-radius: 1rem;
+            }
+        }
+        &__hamburger {
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            width: 2.5em;
+            height: 2em;
+            @include flex(space-between, column);
+            align-items: start;
+            .bar {
+                &:nth-child(1) {
+                    width: 80%;
+                }
+                &:nth-child(3) {
+                    width: 50%;
+                }
+            }
+        }
+        &__close {
+            cursor: pointer;
+            display: block;
+            @include size(2.5em);
+            position: absolute;
+            top: 5%;
+            right: 10%;
+            .bar {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                background: $white-color;
+                &:nth-child(2) {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+@keyframes navItem {
+    to {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }
