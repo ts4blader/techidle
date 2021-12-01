@@ -89,3 +89,8 @@
         }
     }
 }
+@include responsive($break-point-md) {
+    .form-wrapper {
+        width: 80%;
+    }
+}

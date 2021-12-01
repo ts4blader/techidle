@@ -8,7 +8,9 @@ export default function LoginPage() {
     <div className="login-page">
       <SigninForm />
       <SignupForm />
-      <Image src="svg/login.svg" alt="login" />
+      <div className="preview hide-on-md">
+        <Image src="svg/login.svg" alt="login" />
+      </div>
     </div>
   );
 }
