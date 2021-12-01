@@ -22,7 +22,7 @@ const others = [
   "mi-screen-zero",
   "mi-watch-lite",
   "mi-watch",
-  "mi-ortable-bluetooth-black",
+  "mi-portable-bluetooth-black",
   "redmi-power-bank-10000",
   "mi-robot-vacuum-1C",
   "mi-band-6",

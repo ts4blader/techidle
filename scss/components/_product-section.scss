@@ -2,12 +2,12 @@
     font-size: 2rem;
     &[data-fold="true"] {
         .products {
-            animation: slideUp 0.5s forwards ease;
+            animation: foldUp 0.5s forwards ease;
         }
     }
     &[data-fold="false"] {
         .products {
-            animation: slideDown 0.5s forwards ease;
+            animation: foldDown 0.3s forwards ease;
         }
     }
     .products {
@@ -36,7 +36,7 @@
     }
 }
 
-@keyframes slideUp {
+@keyframes foldUp {
     from {
         transform: translateY(0);
         opacity: 1;
@@ -49,9 +49,9 @@
         margin-top: 0;
     }
 }
-@keyframes slideDown {
+@keyframes foldDown {
     from {
-        transform: translateY(-100%);
+        transform: translateY(-20%);
         opacity: 0;
     }
     to {
