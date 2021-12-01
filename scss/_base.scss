@@ -11,6 +11,9 @@ html {
     font-size: 62.5%; // 1rem = 10px;
     font-family: $main-font;
     scroll-behavior: smooth;
+    @include responsive($break-point-lg) {
+        font-size: 55%;
+    }
 }
 
 body {
