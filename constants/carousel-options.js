@@ -17,6 +17,9 @@ const HOME_CAROUSEL = {
         after: 60,
       },
     },
+    768: {
+      perView: 2,
+    },
   },
 };
 
@@ -38,6 +41,9 @@ const PRODUCTS_CAROUSEL = {
         before: 0,
         after: 100,
       },
+    },
+    768: {
+      perView: 3,
     },
   },
 };
