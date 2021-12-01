@@ -1,9 +1,72 @@
 .loader {
     position: fixed;
     @include size(100%);
-    @include flex();
     top: 0;
     left: 0;
     background: $main-color;
     z-index: $modal-layer + 1;
+    font-size: 2rem;
+    &[data-complete="true"] {
+        animation: slideDown 1s $expoIn 3.5s forwards;
+        p {
+            display: none;
+        }
+        .char {
+            animation: slideDown 1s reverse $expoIn forwards, slideDown 1s $expoIn forwards;
+        }
+    }
+    p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: $white-color;
+        font-size: 2em;
+        font-weight: 500;
+        text-align: center;
+        transform: translateY(5vmin);
+        animation: blink 1s steps(1) infinite;
+    }
+    .logo {
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: $white-color;
+        font-weight: bold;
+        font-size: 8em;
+        overflow: hidden;
+        .char {
+            transform: translateY(100%);
+            letter-spacing: 0.5rem;
+            display: inline-block;
+            text-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.1);
+        }
+        @for $i from 0 through 10 {
+            .char-#{$i} {
+                animation-delay: #{$i * 100 + 500}ms, #{$i * 100 + 3000}ms;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }
