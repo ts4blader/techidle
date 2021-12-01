@@ -8,6 +8,16 @@ const HOME_CAROUSEL = {
     before: 100,
     after: 100,
   },
+  breakpoints: {
+    1024: {
+      perView: 3,
+      gap: 30,
+      peek: {
+        before: 60,
+        after: 60,
+      },
+    },
+  },
 };
 
 const PRODUCTS_CAROUSEL = {
@@ -19,6 +29,16 @@ const PRODUCTS_CAROUSEL = {
   peek: {
     before: 0,
     after: 150,
+  },
+  breakpoints: {
+    1024: {
+      perView: 4,
+      gap: 30,
+      peek: {
+        before: 0,
+        after: 100,
+      },
+    },
   },
 };
 
