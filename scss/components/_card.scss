@@ -61,6 +61,12 @@
     }
 }
 
+@include responsive($break-point-xs) {
+    .card {
+        font-size: 1.5rem;
+    }
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(10rem);

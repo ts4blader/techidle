@@ -8,7 +8,7 @@ export default function Nav() {
   const [show, setShow] = useState(false);
 
   return (
-    <nav className="nav container" data-show={show}>
+    <nav className="nav" data-show={show}>
       <div className="nav__logo">
         <Link href="/">
           <a>

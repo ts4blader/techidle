@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     font-size: 2rem;
-    padding: 2rem 0;
+    padding: 2rem 10%;
     height: 10vh;
     &__logo {
         @include size(3em);
@@ -132,6 +132,23 @@
                 background: $white-color;
                 &:nth-child(2) {
                     transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+@include responsive($break-point-xs) {
+    .nav {
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 1.5rem;
+        .bar {
+            height: 0.7rem;
+        }
+        &__right {
+            .nav__categories {
+                li {
+                    font-size: 2em;
                 }
             }
         }

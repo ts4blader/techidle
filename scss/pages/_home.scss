@@ -21,7 +21,7 @@
         }
         &.partners {
             .partners-wrapper {
-                @include flex(space-around, center);
+                @include flex(space-around, row);
                 margin-top: 5vmin;
                 .partner {
                     width: 20%;
@@ -51,6 +51,21 @@
                 .partners-wrapper {
                     .partner {
                         width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive($break-point-xs) {
+    .home-page {
+        section {
+            &.partners {
+                .partners-wrapper {
+                    flex-wrap: wrap;
+                    .partner {
+                        width: 40%;
+                        margin-bottom: 3rem;
                     }
                 }
             }

@@ -36,5 +36,15 @@
         font-style: italic;
     }
 }
-@include responsive($break-point-sm) {
+@include responsive($break-point-xs) {
+    .footer {
+        font-size: 1.5rem;
+        &__body {
+            .pillars {
+                ul.pillar {
+                    margin-right: 8rem;
+                }
+            }
+        }
+    }
 }

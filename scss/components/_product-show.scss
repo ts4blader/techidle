@@ -1,5 +1,6 @@
 .product-show {
     margin: 5vmin auto;
+    font-size: 2rem;
     .product-list {
         display: grid;
         grid-template-areas:
@@ -55,6 +56,16 @@
             display: block;
             .item {
                 margin-bottom: 3rem;
+            }
+        }
+    }
+}
+@include responsive($break-point-xs) {
+    .product-show {
+        font-size: 1.5rem;
+        .product-list {
+            .item {
+                margin-bottom: 2rem;
             }
         }
     }

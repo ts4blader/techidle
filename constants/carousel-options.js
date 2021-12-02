@@ -20,6 +20,14 @@ const HOME_CAROUSEL = {
     768: {
       perView: 2,
     },
+    480: {
+      perView: 1,
+      gap: 10,
+      peek: {
+        before: 30,
+        after: 30,
+      },
+    },
   },
 };
 
