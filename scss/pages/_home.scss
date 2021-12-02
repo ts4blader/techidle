@@ -30,3 +30,30 @@
         }
     }
 }
+
+@include responsive($break-point-sm) {
+    .home-page {
+        section {
+            .cards {
+                flex-direction: column;
+                .card {
+                    margin-right: 0;
+                    margin-bottom: 3rem;
+                }
+            }
+            .faqs {
+                flex-direction: column;
+                .col {
+                    width: 100%;
+                }
+            }
+            &.partners {
+                .partners-wrapper {
+                    .partner {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}

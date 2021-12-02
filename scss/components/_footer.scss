@@ -17,18 +17,16 @@
         @include flex(space-between, center);
         .pillars {
             display: flex;
+            flex-wrap: wrap;
             ul.pillar {
                 margin-right: 10rem;
+                margin-bottom: 2rem;
                 .title {
                     font-weight: bold;
                     font-size: 1.1em;
                     margin-bottom: 0.5em;
                 }
-                li {
-                }
             }
-        }
-        .footer-image {
         }
     }
     &__foot {
@@ -37,4 +35,6 @@
         font-size: 0.8em;
         font-style: italic;
     }
+}
+@include responsive($break-point-sm) {
 }
