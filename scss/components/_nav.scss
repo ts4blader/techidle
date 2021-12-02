@@ -107,7 +107,7 @@
             width: 2.5em;
             height: 2em;
             @include flex(space-between, column);
-            align-items: start;
+            align-items: flex-start;
             .bar {
                 &:nth-child(1) {
                     width: 80%;
