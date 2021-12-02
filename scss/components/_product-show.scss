@@ -48,3 +48,14 @@
         }
     }
 }
+
+@include responsive($break-point-sm) {
+    .product-show {
+        .product-list {
+            display: block;
+            .item {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
