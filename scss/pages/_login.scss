@@ -27,3 +27,19 @@
         }
     }
 }
+@include responsive($break-point-xs) {
+    .login-page {
+        height: unset;
+        background: $white-color;
+        padding: 5vmax 0;
+        .form-wrapper {
+            width: 100%;
+            &.signup[data-signin="true"] {
+                height: 0;
+            }
+            &.signin[data-signin="false"] {
+                height: 0;
+            }
+        }
+    }
+}
