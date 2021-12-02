@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Card({ data, number }) {
+  const [show, setShow] = useState(false);
   const { bg, title, description, date } = data;
 
   const style = {
@@ -10,7 +11,12 @@ export default function Card({ data, number }) {
   };
 
   return (
-    <div className="card" style={style}>
+    <div
+      className="card"
+      style={style}
+      data-show={show}
+      onClick={() => setShow((show) => !show)}
+    >
       <div className="card__content">
         <div className="top">
           <p className="number">{number < 10 ? `0${number}` : number} </p>

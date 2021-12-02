@@ -10,6 +10,14 @@
             animation-timing-function: ease;
         }
     }
+    &[data-show="true"] .card__content {
+        transform: translateY(0);
+        & > * {
+            animation-name: slideIn;
+            animation-duration: 0.5s;
+            animation-timing-function: ease;
+        }
+    }
     &__content {
         height: 100%;
         transform: translateY(100%);
