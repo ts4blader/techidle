@@ -24,11 +24,11 @@ export default function Carousel({ data = [], options = {} }) {
   return (
     <div className="glide carousel">
       {/* Control */}
-      <div data-glide-el="controls">
-        <div className="control hide-on-sm prev" data-glide-dir="<">
+      <div data-glide-el="controls" className="hide-on-sm">
+        <div className="control prev" data-glide-dir="<">
           <Icon src="arrow.png" alt="prev" />
         </div>
-        <div className="control hide-on-sm next" data-glide-dir=">">
+        <div className="control next" data-glide-dir=">">
           <Icon src="arrow.png" alt="next" />
         </div>
       </div>

@@ -68,3 +68,7 @@
         font-size: 1.5rem;
     }
 }
+@include responsive($break-point-sm) {
+    .carousel {
+    }
+}
