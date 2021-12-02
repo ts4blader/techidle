@@ -53,6 +53,14 @@ const PRODUCTS_CAROUSEL = {
     768: {
       perView: 3,
     },
+    480: {
+      perView: 2,
+      gap: 20,
+      peek: {
+        before: 0,
+        after: 50,
+      },
+    },
   },
 };
 

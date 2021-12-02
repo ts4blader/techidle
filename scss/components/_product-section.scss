@@ -37,6 +37,19 @@
     }
 }
 
+@include responsive($break-point-xs) {
+    .product-section {
+        font-size: 1.8rem;
+        .products {
+            .item {
+                font-size: 1.5rem;
+                width: 12rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
 @keyframes foldUp {
     from {
         transform: translateY(0);
