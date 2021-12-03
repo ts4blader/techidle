@@ -2,6 +2,7 @@ import React from "react";
 import Image from "../components/Image";
 import Button from "../components/Button";
 import MyHead from "../components/MyHead";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -13,12 +14,15 @@ export default function NotFound() {
         <Image src="svg/404.svg" alt="Not found" />
         <p className="description">This page is can not be reached!</p>
         <div className="cta">
-          <Button
-            text="Go back home"
-            link="/"
-            img="purple-arrow.png"
-            align="reverse"
-          />
+          <Link href="/">
+            <a>
+              <Button
+                text="Go back home"
+                img="purple-arrow.png"
+                align="reverse"
+              />
+            </a>
+          </Link>
         </div>
       </section>
     </div>

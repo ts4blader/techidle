@@ -23,3 +23,17 @@
         }
     }
 }
+
+@include responsive($break-point-sm) {
+    .notfound-page {
+        p.description {
+            font-size: 1.5em;
+        }
+        .cta {
+            .button {
+                font-size: 1em;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+}
