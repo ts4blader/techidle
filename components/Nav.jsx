@@ -35,7 +35,11 @@ export default function Nav() {
             );
           })}
         </ul>
-        <Button text="Login" link="/login" />
+        <Link href="/login">
+          <a>
+            <Button text="Login" onClick={() => setShow(false)} />
+          </a>
+        </Link>
       </div>
     </nav>
   );

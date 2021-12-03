@@ -92,7 +92,7 @@
                 }
             }
             .button {
-                position: absolute;
+                @include abs-center(x);
                 width: 50%;
                 font-size: 2em;
                 padding: 0.2em 0.5em;

@@ -1,15 +1,15 @@
 import Head from "next/head";
-
 import React from "react";
 import { META } from "../constants/base";
 
 MyHead.defaultProps = {
-  meta: META,
+  title: META.title,
+  description: META.description,
+  img: META.img,
+  url: META.url,
 };
 
-export default function MyHead({ meta }) {
-  const { title, description, img, url } = meta;
-
+export default function MyHead({ title, description, img, url }) {
   return (
     <Head>
       {/* <!-- Primary Meta Tags --> */}

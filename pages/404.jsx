@@ -1,10 +1,14 @@
 import React from "react";
 import Image from "../components/Image";
 import Button from "../components/Button";
+import MyHead from "../components/MyHead";
 
 export default function NotFound() {
   return (
     <div className="notfound-page">
+      {/* Head */}
+      <MyHead title="Not Found page | TechIdle" />
+
       <section className="container">
         <Image src="svg/404.svg" alt="Not found" />
         <p className="description">This page is can not be reached!</p>

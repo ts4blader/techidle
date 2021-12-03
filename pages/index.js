@@ -5,12 +5,16 @@ import ProductShow from "../components/ProductShow";
 import Card from "../components/Card";
 import Image from "../components/Image";
 import According from "../components/According";
+import MyHead from "../components/MyHead";
 import { HERO, TRENDING, NEW, CARDS, FAQ, PARTNERS } from "../constants/home";
 import { HOME_CAROUSEL } from "../constants/carousel-options";
 
 export default function Home() {
   return (
     <div className="home-page">
+      {/* Head */}
+      <MyHead />
+      {/* Hero */}
       <Hero content={HERO} />
       {/* Trending section */}
       <section className="trending container">

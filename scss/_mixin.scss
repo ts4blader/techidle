@@ -7,18 +7,18 @@
     align-items: center;
 }
 
-@mixin absoluteCenter($pos: "both") {
+@mixin abs-center($pos: "both") {
     position: absolute;
     @if $pos == "both" {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    @if $pos == "hor" {
+    @if $pos == "x" {
         left: 50%;
         transform: translateX(-50%);
     }
-    @if $pos == "ver" {
+    @if $pos == "y" {
         top: 50%;
         transform: translateY(-50%);
     }

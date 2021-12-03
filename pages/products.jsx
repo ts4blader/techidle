@@ -1,12 +1,16 @@
 import React from "react";
 import Carousel from "../components/Carousel";
 import ProductSection from "../components/ProductSection";
+import MyHead from "../components/MyHead";
 import { STANDOUT, PRODUCT } from "../constants/products";
 import { PRODUCTS_CAROUSEL } from "../constants/carousel-options";
 
 export default function Products() {
   return (
     <div className="products-page">
+      {/* Head */}
+      <MyHead title="Products | TechIdle" />
+
       {/* Stand out section  */}
       <section className="stand-out">
         <div className="title">Stand Out</div>
