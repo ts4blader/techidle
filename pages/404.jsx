@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="notfound-page">
+    <div className="notfound-page" data-scroll-section>
       {/* Head */}
       <MyHead title="Not Found page | TechIdle" />
 

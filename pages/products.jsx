@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "../components/Carousel";
 import ProductSection from "../components/ProductSection";
 import MyHead from "../components/MyHead";
 import { STANDOUT, PRODUCT } from "../constants/products";
 import { PRODUCTS_CAROUSEL } from "../constants/carousel-options";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { useStore } from "../store/Store";
 
 export default function Products() {
+  const [state, dispatch] = useStore();
+  const { scroll } = useLocomotiveScroll();
+
+  useEffect(() => {
+    scroll.scrollTo(`#${state.productSection}`);
+  }, [state]);
+
   return (
-    <div className="products-page">
+    <div className="products-page" data-scroll-section>
       {/* Head */}
       <MyHead title="Products | TechIdle" />
 

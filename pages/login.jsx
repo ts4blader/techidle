@@ -6,7 +6,7 @@ import MyHead from "../components/MyHead";
 
 export default function LoginPage() {
   return (
-    <div className="login-page">
+    <div className="login-page" data-scroll-section>
       {/* Head */}
       <MyHead title="Login page | TechIdle" />
 

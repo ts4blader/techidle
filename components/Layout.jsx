@@ -1,27 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 import Nav from "./Nav";
-import Button from "./Button";
 import Footer from "./Footer";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
 export default function Layout({ children }) {
-  const onTop = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
+  const containerRef = useRef(null);
 
   return (
-    <div className="layout wrapper">
-      {/* Navigation */}
-      <Nav />
-      {/* On top button */}
-      <div className="ontop-button" onClick={onTop}>
-        <Button img="purple-arrow.png" />
+    <LocomotiveScrollProvider
+      options={{
+        smooth: true,
+        multiplier: 3,
+        // ... all available Locomotive Scroll instance options
+      }}
+      watch={[]}
+      containerRef={containerRef}
+    >
+      <div className="layout wrapper" ref={containerRef} data-scroll-container>
+        {/* Navigation */}
+        <Nav />
+        {children}
+        {/* Footer */}
+        <Footer />
       </div>
-      {children}
-      <Footer />
-    </div>
+    </LocomotiveScrollProvider>
   );
 }

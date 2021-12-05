@@ -11,7 +11,7 @@ import { HOME_CAROUSEL } from "../constants/carousel-options";
 
 export default function Home() {
   return (
-    <div className="home-page">
+    <div className="home-page" data-scroll-section>
       {/* Head */}
       <MyHead />
       {/* Hero */}

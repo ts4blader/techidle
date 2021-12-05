@@ -8,6 +8,7 @@ const INITIAL = {
   showOverlay: false,
   overlayAction: () => {},
   showSignIn: true,
+  productSection: "",
 };
 //* ACTION
 const ACTION = {
@@ -15,6 +16,7 @@ const ACTION = {
   SHOW_OVERLAY: "SHOW_OVERLAY",
   HIDE_SIGNIN: "HIDE_SIGNIN",
   SHOW_SIGNIN: "SHOW_SIGNIN",
+  SET_PRODUCT_SECTION: "SET_PRODUCT_SECTION",
 };
 
 const Store = ({ children }) => {

@@ -10,6 +10,8 @@ const reducer = (state, action) => {
       return { ...state, showSignIn: false };
     case ACTION.SHOW_SIGNIN:
       return { ...state, showSignIn: true };
+    case ACTION.SET_PRODUCT_SECTION:
+      return { ...state, productSection: action.payload };
   }
 };
 

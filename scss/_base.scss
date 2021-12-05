@@ -66,3 +66,7 @@ a {
     background: $light-color;
     border-radius: 1rem;
 }
+
+.c-scrollbar {
+    z-index: $modal-layer;
+}

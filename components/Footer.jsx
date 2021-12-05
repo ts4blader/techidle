@@ -5,7 +5,7 @@ import Image from "./Image";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" data-scroll-section>
       <div className="container">
         <div className="footer__body">
           {/* Pillars  */}

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import Icon from "./Icon";
 import { CATEGORIES } from "../constants/base";
+import { useRouter } from "next/router";
 import Button from "./Button";
 import Link from "next/link";
+import { useStore, ACTION } from "../store/Store";
 
 export default function Nav() {
   const [show, setShow] = useState(false);
+  const router = useRouter();
+  const [state, dispatch] = useStore();
 
   return (
     <nav className="nav" data-show={show}>
@@ -29,17 +33,26 @@ export default function Nav() {
         <ul className="nav__categories">
           {CATEGORIES.map((item) => {
             return (
-              <li key={item + "-nav"} onClick={() => setShow(false)}>
-                <Link href={`/products#${item}`}>{item}</Link>
+              <li
+                key={item + "-nav"}
+                onClick={() => {
+                  setShow(false);
+                  router.push("/products");
+                  dispatch({ type: ACTION.SET_PRODUCT_SECTION, payload: item });
+                }}
+              >
+                {item}
               </li>
             );
           })}
         </ul>
-        <Link href="/login">
-          <a>
-            <Button text="Login" onClick={() => setShow(false)} />
-          </a>
-        </Link>
+        <Button
+          text="Login"
+          onClick={() => {
+            setShow(false);
+            router.push("/login");
+          }}
+        />
       </div>
     </nav>
   );

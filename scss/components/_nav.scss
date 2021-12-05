@@ -4,6 +4,9 @@
     font-size: 2rem;
     padding: 2rem 10%;
     height: 10vh;
+    background: $white-color;
+    z-index: $middle-layer;
+    position: relative;
     &__logo {
         @include size(3em);
         margin-right: 1em;
@@ -29,6 +32,7 @@
     &__categories {
         display: flex;
         li {
+            cursor: pointer;
             font-size: 1.1em;
             text-transform: uppercase;
             margin: 0 1rem;
@@ -78,13 +82,11 @@
                 text-align: center;
                 width: 100%;
                 li {
+                    color: $white-color;
                     font-size: 2.5em;
                     padding: 0.5em 0;
                     transform: translateY(200%);
                     opacity: 0;
-                    & > * {
-                        color: $white-color;
-                    }
                     @for $i from 1 through 4 {
                         &:nth-child(#{$i}) {
                             animation-delay: #{$i * 100}ms;
