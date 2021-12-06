@@ -12,8 +12,10 @@ export default function Products() {
   const { scroll } = useLocomotiveScroll();
 
   useEffect(() => {
-    scroll.scrollTo(`#${state.productSection}`);
-  }, [state]);
+    setTimeout(() => {
+      scroll?.scrollTo(`#${state.productSection}`);
+    }, 200);
+  }, [state, scroll]);
 
   return (
     <div className="products-page" data-scroll-section>

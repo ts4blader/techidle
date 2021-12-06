@@ -2,8 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { CATEGORIES, SOCIAL, PARTNERS } from "../constants/footer";
 import Image from "./Image";
+import { useStore, ACTION } from "../store/Store";
 
 export default function Footer() {
+  const [state, dispatch] = useStore();
   return (
     <footer className="footer" data-scroll-section>
       <div className="container">
@@ -13,7 +15,15 @@ export default function Footer() {
             <ul className="pillar">
               <div className="title">categories</div>
               {CATEGORIES.map((item) => (
-                <li key={item + "footer"}>
+                <li
+                  key={item + "footer"}
+                  onClick={() => {
+                    dispatch({
+                      type: ACTION.SET_PRODUCT_SECTION,
+                      payload: item,
+                    });
+                  }}
+                >
                   <Link href="/products">{item}</Link>
                 </li>
               ))}
