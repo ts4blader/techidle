@@ -22,10 +22,10 @@ const HOME_CAROUSEL = {
     },
     480: {
       perView: 1,
-      gap: 10,
+      gap: 20,
       peek: {
-        before: 30,
-        after: 30,
+        before: 50,
+        after: 50,
       },
     },
   },
