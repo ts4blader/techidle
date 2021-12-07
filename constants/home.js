@@ -10,7 +10,7 @@ const HERO = {
     text: "Browse now",
     url: "/products",
   },
-  preview: "",
+  preview: ["mipad-5.jpg", "mi-watch.png", "mi-9C.jpg", "K10.jpg"],
 };
 
 const TRENDING = shuffleArray(ALL).slice(0, 6);

@@ -1,7 +1,8 @@
 .hero {
     font-size: 2rem;
-    height: 90vh;
+    min-height: 90vh;
     @include flex();
+    column-gap: 5%;
     &__content {
         flex: 1;
         .title {
@@ -25,6 +26,89 @@
         }
     }
     &__preview {
+        display: grid;
+        height: 60rem;
+        grid-template-areas:
+            "item0 item0 item0 item0 none none"
+            "item0 item0 item0 item0 item1 item1"
+            "item2 item2 item2 item3 item3 item3";
         flex: 1;
+        grid-gap: 1em;
+        .item {
+            border-radius: 0.5em;
+            &.item-0 {
+                grid-area: item0;
+            }
+            &.item-1 {
+                grid-area: item1;
+            }
+            &.item-2 {
+                grid-area: item2;
+            }
+            &.item-3 {
+                grid-area: item3;
+            }
+        }
+    }
+}
+
+.tilt-in-right-2 {
+    -webkit-animation: tilt-in-right-2 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    animation: tilt-in-right-2 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+@include responsive($break-point-md) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 5rem;
+        padding-top: 5vmin;
+        padding-bottom: 5vmin;
+        text-align: center;
+        &__content {
+            width: 100%;
+            flex: 0;
+            .title {
+                font-size: 3em;
+                margin-bottom: 2rem;
+            }
+            .subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .cta {
+                .button {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        &__preview {
+            flex: 0;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 60rem;
+        }
+    }
+}
+@include responsive($break-point-sm) {
+    .hero {
+        &__preview {
+            width: 100%;
+        }
+    }
+}
+@include responsive($break-point-xs) {
+    .hero {
+        font-size: 1.5rem;
+        &__content {
+            .title {
+                font-size: 2.5em;
+            }
+        }
+        &__preview {
+            min-height: 30rem;
+        }
     }
 }
