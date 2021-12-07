@@ -13,6 +13,7 @@ export default function Products() {
 
   useEffect(() => {
     setTimeout(() => {
+      if (!state.productSection) return;
       scroll?.scrollTo(`#${state.productSection}`);
     }, 200);
   }, [state, scroll]);
